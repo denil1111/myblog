@@ -4,11 +4,11 @@
 
 # Site
 title: Orz_kuzi's Blog
-subtitle: to code!
+subtitle: code step by step
 description: =~=!
 author: Zhangyuhao
 email: zyh.work@gmail.com
-language:
+language: zh-TW
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
