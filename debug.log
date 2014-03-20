@@ -1,5 +1,5 @@
-date: 2014-03-10 22:34:16.573
-argv: node /usr/local/bin/hexo generate
+date: 2014-03-21 00:38:25.917
+argv: node /usr/local/bin/hexo server
 os: Darwin 13.0.0 darwin x64
 version:
   hexo: 2.4.5
@@ -13,41 +13,32 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 22:34:16.201 Configuration file load successfully
-[debug] 22:34:16.203 Version info checked successfully
-[debug] 22:34:16.239 Loading database.
-[debug] 22:34:16.263 Script load successfully: fancybox.js
-[debug] 22:34:16.297 Theme layout loaded
-[debug] 22:34:16.315 Theme configuration loaded
-[debug] 22:34:16.361 Theme source loaded
-[debug] 22:34:16.401 Processed: _posts/hello-world.md
-[debug] 22:34:16.402 Processed: _posts/say.md
-[debug] 22:34:16.409 Cache saved
-[info] 22:34:16.449 Files loaded in 0.184s
-[debug] 22:34:16.467 Public folder cleared: archives/index.html,archives/2014/index.html,archives/2014/03/index.html,index.html,2014/03/10/say/index.html,2014/03/10/hello-world/index.html,js/script.js,css/style.css,css/fonts/FontAwesome.otf,css/fonts/fontawesome-webfont.eot,css/fonts/fontawesome-webfont.svg,css/fonts/fontawesome-webfont.ttf,css/fonts/fontawesome-webfont.woff,css/images/banner.jpg,fancybox/blank.gif,fancybox/fancybox_loading.gif,fancybox/fancybox_loading@2x.gif,fancybox/fancybox_overlay.png,fancybox/fancybox_sprite.png,fancybox/fancybox_sprite@2x.png,fancybox/jquery.fancybox.css,fancybox/jquery.fancybox.js,fancybox/jquery.fancybox.pack.js,fancybox/helpers/fancybox_buttons.png,fancybox/helpers/jquery.fancybox-buttons.css,fancybox/helpers/jquery.fancybox-buttons.js,fancybox/helpers/jquery.fancybox-media.js,fancybox/helpers/jquery.fancybox-thumbs.css,fancybox/helpers/jquery.fancybox-thumbs.js
-[debug] 22:34:16.469 Render archive: archives/
-[debug] 22:34:16.470 Render archive: archives/2014/
-[debug] 22:34:16.470 Render archive: archives/2014/03/
-[debug] 22:34:16.470 Render index: 
-[debug] 22:34:16.470 Render layout: 2014/03/10/say/
-[debug] 22:34:16.470 Render post: 2014/03/10/hello-world/
-[error] 22:34:16.561 HexoError: Render failed: 2014/03/10/say/index.html
-ReferenceError: /Users/zyhc/code/zyhblog/myblog/themes/landscape/layout/layout.ejs:7
-    5|       <%- partial('_partial/header') %>
-    6|       <div class="outer">
- >> 7|         <section id="main"><%- body %></section>
-    8|         <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-    9|           <%- partial('_partial/sidebar') %>
-    10|         <% } %>
-
-body is not defined
-    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:237:14), <anonymous>:29:258)
-    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:237:14), <anonymous>:29:738)
-    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:250:15
-    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:288:13)
-    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
-    at store.(anonymous function) (/usr/local/lib/node_modules/hexo/lib/extend/renderer.js:67:27)
-    at /usr/local/lib/node_modules/hexo/lib/core/render.js:181:7
-    at fn (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:579:34)
-    at Object._onImmediate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:495:34)
-    at processImmediate [as _immediateCallback] (timers.js:330:15)
+[debug] 00:35:58.883 Configuration file load successfully
+[debug] 00:35:58.885 Version info checked successfully
+[debug] 00:35:58.923 Loading database.
+[debug] 00:35:58.952 Script load successfully: fancybox.js
+[debug] 00:35:58.970 Theme layout loaded
+[debug] 00:35:58.979 Theme configuration loaded
+[debug] 00:35:59.009 Theme source loaded
+[debug] 00:35:59.035 Processed: _posts/hello-world.md
+[debug] 00:35:59.035 Processed: _posts/day1.md
+[debug] 00:35:59.035 Processed: _posts/tosay.md
+[debug] 00:35:59.036 Processed: _posts/type.md
+[debug] 00:35:59.045 Cache saved
+[info] 00:35:59.071 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
+[debug] 00:36:01.981 Render index: 
+[create] 00:38:22.190 Theme: source/css/fonts/Funkydori.otf
+[delete] 00:38:25.805 Theme: source/css/fonts/Funkydori.otf
+[create] 00:38:25.807 Theme: source/css/fonts/Den.otf
+[error] 00:38:25.910 ReferenceError: route is not defined
+ReferenceError: route is not defined
+    at _watchSource (/usr/local/lib/node_modules/hexo/lib/core/theme.js:210:5)
+    at /usr/local/lib/node_modules/hexo/lib/core/theme.js:260:15
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:108:13
+    at Array.forEach (native)
+    at _each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:32:24)
+    at Object.async.each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:107:9)
+    at async.series.generate.watch (/usr/local/lib/node_modules/hexo/lib/core/theme.js:249:17)
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:548:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:224:13
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:131:13)
