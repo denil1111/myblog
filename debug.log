@@ -1,6 +1,6 @@
-date: 2014-03-21 00:38:25.917
+date: 2014-03-22 00:20:06.737
 argv: node /usr/local/bin/hexo server
-os: Darwin 13.0.0 darwin x64
+os: Darwin 13.1.0 darwin x64
 version:
   hexo: 2.4.5
   http_parser: 1.0
@@ -13,24 +13,39 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 00:35:58.883 Configuration file load successfully
-[debug] 00:35:58.885 Version info checked successfully
-[debug] 00:35:58.923 Loading database.
-[debug] 00:35:58.952 Script load successfully: fancybox.js
-[debug] 00:35:58.970 Theme layout loaded
-[debug] 00:35:58.979 Theme configuration loaded
-[debug] 00:35:59.009 Theme source loaded
-[debug] 00:35:59.035 Processed: _posts/hello-world.md
-[debug] 00:35:59.035 Processed: _posts/day1.md
-[debug] 00:35:59.035 Processed: _posts/tosay.md
-[debug] 00:35:59.036 Processed: _posts/type.md
-[debug] 00:35:59.045 Cache saved
-[info] 00:35:59.071 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
-[debug] 00:36:01.981 Render index: 
-[create] 00:38:22.190 Theme: source/css/fonts/Funkydori.otf
-[delete] 00:38:25.805 Theme: source/css/fonts/Funkydori.otf
-[create] 00:38:25.807 Theme: source/css/fonts/Den.otf
-[error] 00:38:25.910 ReferenceError: route is not defined
+[debug] 00:12:39.753 Configuration file load successfully
+[debug] 00:12:39.761 Version info checked successfully
+[debug] 00:12:39.791 Loading database.
+[debug] 00:12:39.815 Script load successfully: fancybox.js
+[debug] 00:12:39.832 Theme layout loaded
+[debug] 00:12:39.842 Theme configuration loaded
+[debug] 00:12:39.868 Theme source loaded
+[debug] 00:12:39.906 Processed: _posts/day1.md
+[debug] 00:12:39.907 Processed: _posts/hello-world.md
+[debug] 00:12:39.908 Processed: _posts/hexonew.md
+[debug] 00:12:39.908 Processed: _posts/tosay.md
+[debug] 00:12:39.909 Processed: _posts/type.md
+[debug] 00:12:39.918 Cache saved
+[info] 00:12:39.940 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
+[debug] 00:12:40.801 Render index: 
+[debug] 00:13:00.097 Render index: 
+[debug] 00:13:05.697 Render index: 
+[debug] 00:13:33.085 Render index: 
+[debug] 00:13:37.189 Render index: 
+[debug] 00:15:13.723 Render index: 
+[debug] 00:15:37.594 Render index: 
+[debug] 00:15:46.037 Render index: 
+[debug] 00:15:52.101 Render index: 
+[debug] 00:16:04.520 Render index: 
+[debug] 00:16:09.297 Render index: 
+[debug] 00:16:14.380 Render index: 
+[debug] 00:16:18.571 Render index: 
+[debug] 00:16:43.248 Render index: 
+[create] 00:19:58.272 Theme: source/css/fonts/SHOWG.TTF
+[create] 00:19:58.275 Theme: source/css/fonts/COCAINE SANS.TTF
+[delete] 00:20:06.625 Theme: source/css/fonts/COCAINE SANS.TTF
+[create] 00:20:06.626 Theme: source/css/fonts/title.TTF
+[error] 00:20:06.731 ReferenceError: route is not defined
 ReferenceError: route is not defined
     at _watchSource (/usr/local/lib/node_modules/hexo/lib/core/theme.js:210:5)
     at /usr/local/lib/node_modules/hexo/lib/core/theme.js:260:15
