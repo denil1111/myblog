@@ -23,7 +23,7 @@
     title = 'Tag: ' + page.tag;
   }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %><%= config.title2 %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus}) %>
   <% if (theme.rss){ %>
