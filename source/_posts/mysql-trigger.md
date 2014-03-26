@@ -20,9 +20,9 @@ tags:
 
 
 ##创建
-create trigger < trigger name > < when > < action >
-on < table name >
-for each row
+	create trigger < trigger name > < when > < action >
+	on < table name >
+	for each row
 不同于之前的例子
 ##与sqlserver的区别
 1. 首先mysql中不推荐使用@<name>的临时变量，而且@<name>的变量不需要declare申明
@@ -31,3 +31,20 @@ for each row
 4. 如果要在select里赋值，需要用into，且必须用into，因为mysql不能在trigger里输出select
 5. mysql中不能使用print
 6. mysql中用trigger阻止insert一般使用让程序出错的方式，比如对一个不存在的表操作
+
+##我写的功能相似的mysql的trigger
+
+	DELIMITER |
+	CREATE TRIGGER `st1` BEFORE INSERT ON `borrow`
+	 FOR EACH ROW BEGIN
+	   declare cno1 char(10);
+	   declare num1 int;
+	   select count(*) into num1 from borrow where cno=NEW.cno;
+	   if num1>2 then
+	   	 delete from XXXXX;
+	   end if;
+	end
+	|
+
+	DELIMITER ;
+

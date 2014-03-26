@@ -1,5 +1,5 @@
-date: 2014-03-22 00:20:06.737
-argv: node /usr/local/bin/hexo server
+date: 2014-03-22 10:46:38.288
+argv: node /usr/local/bin/hexo generate
 os: Darwin 13.1.0 darwin x64
 version:
   hexo: 2.4.5
@@ -13,47 +13,3 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 00:12:39.753 Configuration file load successfully
-[debug] 00:12:39.761 Version info checked successfully
-[debug] 00:12:39.791 Loading database.
-[debug] 00:12:39.815 Script load successfully: fancybox.js
-[debug] 00:12:39.832 Theme layout loaded
-[debug] 00:12:39.842 Theme configuration loaded
-[debug] 00:12:39.868 Theme source loaded
-[debug] 00:12:39.906 Processed: _posts/day1.md
-[debug] 00:12:39.907 Processed: _posts/hello-world.md
-[debug] 00:12:39.908 Processed: _posts/hexonew.md
-[debug] 00:12:39.908 Processed: _posts/tosay.md
-[debug] 00:12:39.909 Processed: _posts/type.md
-[debug] 00:12:39.918 Cache saved
-[info] 00:12:39.940 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
-[debug] 00:12:40.801 Render index: 
-[debug] 00:13:00.097 Render index: 
-[debug] 00:13:05.697 Render index: 
-[debug] 00:13:33.085 Render index: 
-[debug] 00:13:37.189 Render index: 
-[debug] 00:15:13.723 Render index: 
-[debug] 00:15:37.594 Render index: 
-[debug] 00:15:46.037 Render index: 
-[debug] 00:15:52.101 Render index: 
-[debug] 00:16:04.520 Render index: 
-[debug] 00:16:09.297 Render index: 
-[debug] 00:16:14.380 Render index: 
-[debug] 00:16:18.571 Render index: 
-[debug] 00:16:43.248 Render index: 
-[create] 00:19:58.272 Theme: source/css/fonts/SHOWG.TTF
-[create] 00:19:58.275 Theme: source/css/fonts/COCAINE SANS.TTF
-[delete] 00:20:06.625 Theme: source/css/fonts/COCAINE SANS.TTF
-[create] 00:20:06.626 Theme: source/css/fonts/title.TTF
-[error] 00:20:06.731 ReferenceError: route is not defined
-ReferenceError: route is not defined
-    at _watchSource (/usr/local/lib/node_modules/hexo/lib/core/theme.js:210:5)
-    at /usr/local/lib/node_modules/hexo/lib/core/theme.js:260:15
-    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:108:13
-    at Array.forEach (native)
-    at _each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:32:24)
-    at Object.async.each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:107:9)
-    at async.series.generate.watch (/usr/local/lib/node_modules/hexo/lib/core/theme.js:249:17)
-    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:548:21
-    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:224:13
-    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:131:13)
