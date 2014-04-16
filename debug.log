@@ -1,4 +1,4 @@
-date: 2014-04-16 09:30:37.107
+date: 2014-04-16 15:40:17.217
 argv: node /usr/local/bin/hexo generate
 os: Darwin 13.1.0 darwin x64
 version:
@@ -13,26 +13,41 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 09:30:36.842 Configuration file load successfully
-[debug] 09:30:36.850 Version info checked successfully
-[debug] 09:30:36.879 Loading database.
-[debug] 09:30:36.902 Script load successfully: fancybox.js
-[debug] 09:30:36.935 Theme layout loaded
-[debug] 09:30:36.950 Theme configuration loaded
-[debug] 09:30:37.033 Theme source loaded
-[error] 09:30:37.094 { rawMessage: 'Unexpected characters near "]修正 Git 提交信息".',
-  parsedLine: 1,
-  snippet: 'title: [转]修正 Git 提交信息',
-  parsedFile: null,
-  message: 'Unexpected characters near "]修正 Git 提交信息" at line 1 (near "title: [转]修正 Git 提交信息").',
-  domain: 
-   { domain: null,
-     _events: { error: [Function] },
-     _maxListeners: 10,
-     members: [],
-     _disposed: true },
-  domainThrown: true }
-[debug] 09:30:37.109 Processed: _posts/day1.md
-[debug] 09:30:37.109 Processed: _posts/hello-world.md
-[debug] 09:30:37.109 Processed: _posts/hexonew.md
-[debug] 09:30:37.109 Processed: _posts/mysql-trigger.md
+[debug] 15:40:16.755 Configuration file load successfully
+[debug] 15:40:16.763 Version info checked successfully
+[debug] 15:40:16.801 Loading database.
+[debug] 15:40:16.826 Script load successfully: fancybox.js
+[debug] 15:40:16.858 Theme layout loaded
+[debug] 15:40:16.886 Theme configuration loaded
+[debug] 15:40:16.998 Theme source loaded
+[debug] 15:40:17.068 Processed: _posts/2014-04-15-git-commit-author-modified.md
+[debug] 15:40:17.068 Processed: _posts/character-set.md
+[debug] 15:40:17.068 Processed: _posts/day1.md
+[debug] 15:40:17.068 Processed: _posts/hello-world.md
+[debug] 15:40:17.068 Processed: _posts/hexonew.md
+[debug] 15:40:17.068 Processed: _posts/mysql-trigger.md
+[debug] 15:40:17.068 Processed: _posts/tosay.md
+[debug] 15:40:17.068 Processed: _posts/ttf.md
+[debug] 15:40:17.068 Processed: _posts/type.md
+[debug] 15:40:17.077 Cache saved
+[info] 15:40:17.156 Files loaded in 0.329s
+[debug] 15:40:17.167 Public folder not exists. No need to clear public folder.
+[debug] 15:40:17.171 Render archive: archives/
+[debug] 15:40:17.171 Render archive: archives/2014/
+[debug] 15:40:17.171 Render archive: archives/2014/03/
+[debug] 15:40:17.171 Render archive: archives/2014/04/
+[debug] 15:40:17.171 Render category: categories/Git/
+[debug] 15:40:17.171 Render index: 
+[debug] 15:40:17.171 Render post: 2014/04/16/character-set/
+[debug] 15:40:17.171 Render post: 2014/04/15/2014-04-15-git-commit-author-modified/
+[debug] 15:40:17.171 Render post: 2014/03/25/mysql-trigger/
+[debug] 15:40:17.171 Render post: 2014/03/22/ttf/
+[debug] 15:40:17.172 Render post: 2014/03/21/hexonew/
+[debug] 15:40:17.172 Render post: 2014/03/14/type/
+[debug] 15:40:17.172 Render post: 2014/03/12/day1/
+[debug] 15:40:17.172 Render post: 2014/03/10/tosay/
+[debug] 15:40:17.172 Render post: 2014/03/10/hello-world/
+[debug] 15:40:17.172 Render tag: tags/Github/
+[debug] 15:40:17.172 Render tag: tags/效率/
+[error] 15:40:17.214 Error: ENOENT, open '/Users/zyhc/code/zyhblog/myblog/themes/landscape/source/css/images/banner2.jpg'
+Error: ENOENT, open '/Users/zyhc/code/zyhblog/myblog/themes/landscape/source/css/images/banner2.jpg'
