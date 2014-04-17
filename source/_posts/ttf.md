@@ -1,6 +1,12 @@
 title: wp8(ie)font-face Support
+
 date: 2014-03-22 11:00:46
-tags:
+
+tags: [html, web, font, ttf]
+
+categories:
+- Html
+
 ---
 today, I changed my logo's font and location, well, Dose my blog look better? But when i try to view it on my PC(use ie), the font become invalid, when I use the F12, the console tells me 
 

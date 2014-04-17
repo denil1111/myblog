@@ -7,22 +7,14 @@
     </script>
   <meta charset="utf-8">
   
-  <title>Trigger in mysql | zyh.wtc</title>
+  <title>Tag: html | zyh.wtc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta content="article" property="og:type">
-<meta content="Trigger in mysql" property="og:title">
-<meta content="http://www.zyhwtc.com/2014/03/25/mysql-trigger/" property="og:url">
+  <meta content="website" property="og:type">
+<meta property="og:title">
+<meta content="http://www.zyhwtc.com/tags/html/" property="og:url">
 <meta property="og:image">
 <meta content="zyh" property="og:site_name">
-<meta content="老师sqlserver的例子
-create trigger st1 on borrow
-after insert 
-as
-Begin
-    Declare @num int
-    Declare @cno char(10)
-    select @cno = cno from inserted
-    select @num=count(*) from borrow where cno=@cn" property="og:description">
+<meta property="og:description">
 <meta content="summary" name="twitter:card">
   
     <link rel="alternative" href="/atom.xml" title="zyh" type="application/atom+xml">
@@ -76,10 +68,12 @@ Begin
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-mysql-trigger" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-ttf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/03/25/mysql-trigger/" class="article-date">
-  <time datetime="2014-03-25T03:50:20.000Z" itemprop="datePublished">3月 25 2014</time>
+    <a href="/2014/03/22/ttf/" class="article-date">
+  <time datetime="2014-03-22T03:00:46.000Z" itemprop="datePublished">3月 22 2014</time>
 </a>
     
   </div>
@@ -89,8 +83,8 @@ Begin
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Trigger in mysql
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/03/22/ttf/">wp8(ie)font-face Support</a>
     </h1>
   
 
@@ -98,101 +92,30 @@ Begin
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="老师sqlserver的例子">老师sqlserver的例子</h2>
-<pre><code><span class="operator"><span class="keyword">create</span> <span class="keyword">trigger</span> st1 <span class="keyword">on</span> borrow
-<span class="keyword">after</span> <span class="keyword">insert</span> 
-<span class="keyword">as</span>
-<span class="keyword">Begin</span>
-    <span class="keyword">Declare</span> @num <span class="keyword">int</span>
-    <span class="keyword">Declare</span> @cno <span class="keyword">char</span>(<span class="number">10</span>)
-    <span class="keyword">select</span> @cno = cno <span class="keyword">from</span> inserted
-    <span class="keyword">select</span> @num=<span class="aggregate">count</span>(*) <span class="keyword">from</span> borrow <span class="keyword">where</span> cno=@cno
-    <span class="keyword">If</span>(@num&gt;<span class="number">2</span>)
-    <span class="keyword">begin</span>
-      Print(<span class="string">'一位同学一个学期不可以借三本书！'</span>)
-      <span class="keyword">Rollback</span>
-    <span class="keyword">End</span>
-<span class="keyword">End</span> </span>
-</code></pre><h2 id="创建">创建</h2>
-<pre><code><span class="operator"><span class="keyword">create</span> <span class="keyword">trigger</span> &lt; <span class="keyword">trigger</span> name &gt; &lt; <span class="keyword">when</span> &gt; &lt; <span class="keyword">action</span> &gt;
-<span class="keyword">on</span> &lt; <span class="keyword">table</span> name &gt;
-<span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span></span>
-</code></pre><p>不同于之前的例子</p>
-<h2 id="与sqlserver的区别">与sqlserver的区别</h2>
-<ol>
-<li>首先mysql中不推荐使用@<name>的临时变量，而且@<name>的变量不需要declare申明</li>
-<li>变量赋值使用set &lt; name &gt;＝… 的形式,select &lt; name &gt;=&lt; name2 &gt;的形式不会赋值</li>
-<li>要使用declare 变量，DELIMITER |   |DELIMITER ;把这个trigger包在里面</li>
-<li>如果要在select里赋值，需要用into，且必须用into，因为mysql不能在trigger里输出select</li>
-<li>mysql中不能使用print</li>
-<li>mysql中用trigger阻止insert一般使用让程序出错的方式，比如对一个不存在的表操作</li>
-</ol>
-<h2 id="我写的功能相似的mysql的trigger">我写的功能相似的mysql的trigger</h2>
-<pre><code>DELIMITER |
-CREATE TRIGGER `st1` BEFORE INSERT <span class="keyword">ON</span> `borrow`
- <span class="keyword">FOR</span> <span class="keyword">EACH</span> ROW BEGIN
-   <span class="keyword">declare</span> cno1 <span class="built_in">char</span>(<span class="number">10</span>);
-   <span class="keyword">declare</span> num1 int;
-   <span class="keyword">select</span> count(*) <span class="keyword">into</span> num1 <span class="keyword">from</span> borrow <span class="keyword">where</span> cno=<span class="keyword">NEW</span>.cno;
-   <span class="keyword">if</span> num1&gt;<span class="number">2</span> <span class="keyword">then</span>
-        delete <span class="keyword">from</span> XXXXX;
-   <span class="keyword">end</span> <span class="keyword">if</span>;
-<span class="keyword">end</span>
-|
+        <p>today, I changed my logo’s font and location, well, Dose my blog look better? But when i try to view it on my PC(use ie), the font become invalid, when I use the F12, the console tells me </p>
+<pre><code><span class="tag">CSS3114</span>: <span class="at_rule">@<span class="keyword">font-face</span></span> <span class="tag">failed</span> <span class="tag">OpenType</span> <span class="tag">embedding</span> <span class="tag">permission</span> <span class="tag">check</span>
+</code></pre><p>It troubled me A LOT!Finally I found the solution ….. IE10 or 11 dosen’t support ttf well, so I convert the ttf file to woff file. All right ! It perform good now!</p>
+<hr>
+<blockquote>
+<p><a href="http://blog.edi-c.com/post/wp8-ie10-font-face-support" target="_blank">http://blog.edi-c.com/post/wp8-ie10-font-face-support</a></p>
+</blockquote>
 
-DELIMITER ;
-</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/25/mysql-trigger/" data-id="9m45g51r1aftekg3" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/22/ttf/" data-id="19821te4r161nz9u" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/trigger/">trigger</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/font/">font</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ttf/">ttf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
 
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2014/04/15/2014-04-15-git-commit-author-modified/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (转)修正 Git 提交信息
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/03/22/ttf/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">wp8(ie)font-face Support</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
-<section id="comments">
- <!-- Duoshuo Comment BEGIN -->
-  <div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"zyhblog"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- Duoshuo Comment END -->
-</section>
+  
+  
 </section>
         
           <aside id="sidebar">

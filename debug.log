@@ -1,5 +1,5 @@
-date: 2014-04-16 15:40:17.217
-argv: node /usr/local/bin/hexo generate
+date: 2014-04-17 11:39:39.527
+argv: node /usr/local/bin/hexo server
 os: Darwin 13.1.0 darwin x64
 version:
   hexo: 2.4.5
@@ -13,41 +13,34 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 15:40:16.755 Configuration file load successfully
-[debug] 15:40:16.763 Version info checked successfully
-[debug] 15:40:16.801 Loading database.
-[debug] 15:40:16.826 Script load successfully: fancybox.js
-[debug] 15:40:16.858 Theme layout loaded
-[debug] 15:40:16.886 Theme configuration loaded
-[debug] 15:40:16.998 Theme source loaded
-[debug] 15:40:17.068 Processed: _posts/2014-04-15-git-commit-author-modified.md
-[debug] 15:40:17.068 Processed: _posts/character-set.md
-[debug] 15:40:17.068 Processed: _posts/day1.md
-[debug] 15:40:17.068 Processed: _posts/hello-world.md
-[debug] 15:40:17.068 Processed: _posts/hexonew.md
-[debug] 15:40:17.068 Processed: _posts/mysql-trigger.md
-[debug] 15:40:17.068 Processed: _posts/tosay.md
-[debug] 15:40:17.068 Processed: _posts/ttf.md
-[debug] 15:40:17.068 Processed: _posts/type.md
-[debug] 15:40:17.077 Cache saved
-[info] 15:40:17.156 Files loaded in 0.329s
-[debug] 15:40:17.167 Public folder not exists. No need to clear public folder.
-[debug] 15:40:17.171 Render archive: archives/
-[debug] 15:40:17.171 Render archive: archives/2014/
-[debug] 15:40:17.171 Render archive: archives/2014/03/
-[debug] 15:40:17.171 Render archive: archives/2014/04/
-[debug] 15:40:17.171 Render category: categories/Git/
-[debug] 15:40:17.171 Render index: 
-[debug] 15:40:17.171 Render post: 2014/04/16/character-set/
-[debug] 15:40:17.171 Render post: 2014/04/15/2014-04-15-git-commit-author-modified/
-[debug] 15:40:17.171 Render post: 2014/03/25/mysql-trigger/
-[debug] 15:40:17.171 Render post: 2014/03/22/ttf/
-[debug] 15:40:17.172 Render post: 2014/03/21/hexonew/
-[debug] 15:40:17.172 Render post: 2014/03/14/type/
-[debug] 15:40:17.172 Render post: 2014/03/12/day1/
-[debug] 15:40:17.172 Render post: 2014/03/10/tosay/
-[debug] 15:40:17.172 Render post: 2014/03/10/hello-world/
-[debug] 15:40:17.172 Render tag: tags/Github/
-[debug] 15:40:17.172 Render tag: tags/效率/
-[error] 15:40:17.214 Error: ENOENT, open '/Users/zyhc/code/zyhblog/myblog/themes/landscape/source/css/images/banner2.jpg'
-Error: ENOENT, open '/Users/zyhc/code/zyhblog/myblog/themes/landscape/source/css/images/banner2.jpg'
+[debug] 11:39:32.444 Configuration file load successfully
+[debug] 11:39:32.452 Version info checked successfully
+[debug] 11:39:32.504 Script load successfully: fancybox.js
+[debug] 11:39:32.519 Theme layout loaded
+[debug] 11:39:32.529 Theme configuration loaded
+[debug] 11:39:32.556 Theme source loaded
+[debug] 11:39:32.628 Processed: _posts/2014-04-15-git-commit-author-modified.md
+[debug] 11:39:32.631 Processed: _posts/character-set.md
+[debug] 11:39:32.631 Processed: _posts/day1.md
+[debug] 11:39:32.635 Processed: _posts/hello-world.md
+[debug] 11:39:32.636 Processed: _posts/hexonew.md
+[debug] 11:39:32.636 Processed: _posts/mysql-trigger.md
+[debug] 11:39:32.637 Processed: _posts/tosay.md
+[debug] 11:39:32.638 Processed: _posts/ttf.md
+[debug] 11:39:32.638 Processed: _posts/type.md
+[debug] 11:39:32.640 Cache saved
+[info] 11:39:32.702 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
+[debug] 11:39:33.349 Render index: 
+[update] 11:39:39.418 Source: _posts/day1.md
+[error] 11:39:39.525 { rawMessage: 'You cannot define a sequence item when in a mapping',
+  parsedLine: 6,
+  snippet: '-',
+  parsedFile: null,
+  message: 'You cannot define a sequence item when in a mapping',
+  domain: 
+   { domain: null,
+     _events: { error: [Function] },
+     _maxListeners: 10,
+     members: [],
+     _disposed: true },
+  domainThrown: true }

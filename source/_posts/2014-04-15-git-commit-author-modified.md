@@ -4,7 +4,9 @@ date: 2014-04-15 08:54:47
 
 tags: [Github, 效率]
 
-categories: [Git]
+categories: 
+- Git
+
 
 ---
 转自

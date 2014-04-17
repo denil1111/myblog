@@ -9,13 +9,13 @@
   
   <title>Archives: 2014/3 | zyh.wtc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="og:type" content="blog">
-<meta name="og:title">
-<meta name="og:url" content="http://www.zyhwtc.com/archives/2014/03/">
-<meta name="og:image">
-<meta name="og:site_name" content="zyh">
-<meta name="og:description">
-<meta name="twitter:card" content="summary">
+  <meta content="website" property="og:type">
+<meta property="og:title">
+<meta content="http://www.zyhwtc.com/archives/2014/03/" property="og:url">
+<meta property="og:image">
+<meta content="zyh" property="og:site_name">
+<meta property="og:description">
+<meta content="summary" name="twitter:card">
   
     <link rel="alternative" href="/atom.xml" title="zyh" type="application/atom+xml">
   
@@ -92,46 +92,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="-sqlserver-">老师sqlserver的例子</h2>
-<pre><code>create trigger st1 on borrow
-after insert 
-as
-Begin
-    Declare @num int
-    Declare @cno char(10)
-    select @cno = cno from inserted
-    select @num=count(*) from borrow where cno=@cno
-    If(@num&gt;2)
-    begin
-      Print(&#39;一位同学一个学期不可以借三本书！&#39;)
-      Rollback
-    End
-End 
-</code></pre><h2 id="-">创建</h2>
-<pre><code>create trigger &lt; trigger name &gt; &lt; when &gt; &lt; action &gt;
-on &lt; table name &gt;
-for each row
+        <h2 id="老师sqlserver的例子">老师sqlserver的例子</h2>
+<pre><code><span class="operator"><span class="keyword">create</span> <span class="keyword">trigger</span> st1 <span class="keyword">on</span> borrow
+<span class="keyword">after</span> <span class="keyword">insert</span> 
+<span class="keyword">as</span>
+<span class="keyword">Begin</span>
+    <span class="keyword">Declare</span> @num <span class="keyword">int</span>
+    <span class="keyword">Declare</span> @cno <span class="keyword">char</span>(<span class="number">10</span>)
+    <span class="keyword">select</span> @cno = cno <span class="keyword">from</span> inserted
+    <span class="keyword">select</span> @num=<span class="aggregate">count</span>(*) <span class="keyword">from</span> borrow <span class="keyword">where</span> cno=@cno
+    <span class="keyword">If</span>(@num&gt;<span class="number">2</span>)
+    <span class="keyword">begin</span>
+      Print(<span class="string">'一位同学一个学期不可以借三本书！'</span>)
+      <span class="keyword">Rollback</span>
+    <span class="keyword">End</span>
+<span class="keyword">End</span> </span>
+</code></pre><h2 id="创建">创建</h2>
+<pre><code><span class="operator"><span class="keyword">create</span> <span class="keyword">trigger</span> &lt; <span class="keyword">trigger</span> name &gt; &lt; <span class="keyword">when</span> &gt; &lt; <span class="keyword">action</span> &gt;
+<span class="keyword">on</span> &lt; <span class="keyword">table</span> name &gt;
+<span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span></span>
 </code></pre><p>不同于之前的例子</p>
-<h2 id="-sqlserver-">与sqlserver的区别</h2>
+<h2 id="与sqlserver的区别">与sqlserver的区别</h2>
 <ol>
 <li>首先mysql中不推荐使用@<name>的临时变量，而且@<name>的变量不需要declare申明</li>
-<li>变量赋值使用set &lt; name &gt;＝... 的形式,select &lt; name &gt;=&lt; name2 &gt;的形式不会赋值</li>
+<li>变量赋值使用set &lt; name &gt;＝… 的形式,select &lt; name &gt;=&lt; name2 &gt;的形式不会赋值</li>
 <li>要使用declare 变量，DELIMITER |   |DELIMITER ;把这个trigger包在里面</li>
 <li>如果要在select里赋值，需要用into，且必须用into，因为mysql不能在trigger里输出select</li>
 <li>mysql中不能使用print</li>
 <li>mysql中用trigger阻止insert一般使用让程序出错的方式，比如对一个不存在的表操作</li>
 </ol>
-<h2 id="-mysql-trigger">我写的功能相似的mysql的trigger</h2>
+<h2 id="我写的功能相似的mysql的trigger">我写的功能相似的mysql的trigger</h2>
 <pre><code>DELIMITER |
-CREATE TRIGGER `st1` BEFORE INSERT ON `borrow`
- FOR EACH ROW BEGIN
-   declare cno1 char(10);
-   declare num1 int;
-   select count(*) into num1 from borrow where cno=NEW.cno;
-   if num1&gt;2 then
-        delete from XXXXX;
-   end if;
-end
+CREATE TRIGGER `st1` BEFORE INSERT <span class="keyword">ON</span> `borrow`
+ <span class="keyword">FOR</span> <span class="keyword">EACH</span> ROW BEGIN
+   <span class="keyword">declare</span> cno1 <span class="built_in">char</span>(<span class="number">10</span>);
+   <span class="keyword">declare</span> num1 int;
+   <span class="keyword">select</span> count(*) <span class="keyword">into</span> num1 <span class="keyword">from</span> borrow <span class="keyword">where</span> cno=<span class="keyword">NEW</span>.cno;
+   <span class="keyword">if</span> num1&gt;<span class="number">2</span> <span class="keyword">then</span>
+        delete <span class="keyword">from</span> XXXXX;
+   <span class="keyword">end</span> <span class="keyword">if</span>;
+<span class="keyword">end</span>
 |
 
 DELIMITER ;
@@ -139,9 +139,11 @@ DELIMITER ;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/25/mysql-trigger/" data-id="6vz1nrpu6gdgczjl" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/25/mysql-trigger/" data-id="9m45g51r1aftekg3" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/trigger/">trigger</a></li></ul>
+
     </footer>
   </div>
   
@@ -171,9 +173,9 @@ DELIMITER ;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>today, I changed my logo&#39;s font and location, well, Dose my blog look better? But when i try to view it on my PC(use ie), the font become invalid, when I use the F12, the console tells me </p>
-<pre><code>CSS3114: @font-face failed OpenType embedding permission check
-</code></pre><p>It troubled me A LOT!Finally I found the solution ..... IE10 or 11 dosen&#39;t support ttf well, so I convert the ttf file to woff file. All right ! It perform good now!</p>
+        <p>today, I changed my logo’s font and location, well, Dose my blog look better? But when i try to view it on my PC(use ie), the font become invalid, when I use the F12, the console tells me </p>
+<pre><code><span class="tag">CSS3114</span>: <span class="at_rule">@<span class="keyword">font-face</span></span> <span class="tag">failed</span> <span class="tag">OpenType</span> <span class="tag">embedding</span> <span class="tag">permission</span> <span class="tag">check</span>
+</code></pre><p>It troubled me A LOT!Finally I found the solution ….. IE10 or 11 dosen’t support ttf well, so I convert the ttf file to woff file. All right ! It perform good now!</p>
 <hr>
 <blockquote>
 <p><a href="http://blog.edi-c.com/post/wp8-ie10-font-face-support" target="_blank">http://blog.edi-c.com/post/wp8-ie10-font-face-support</a></p>
@@ -182,9 +184,11 @@ DELIMITER ;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/22/ttf/" data-id="az0712phdiewgd4m" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/22/ttf/" data-id="19821te4r161nz9u" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/font/">font</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ttf/">ttf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+
     </footer>
   </div>
   
@@ -214,13 +218,13 @@ DELIMITER ;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>I spent a <strong><em>whole day</em></strong> making my blog look better!I tried to change the logo-fonts, the location of the logo, the background picture,and so on.....but....Finally...I have done noting but leant a lot about how to change my website by using hexo.....</p>
-<h2 id="but-my-blog-still-look-so-ugly-">But my blog still look so ugly!!!!</h2>
+        <p>I spent a <strong><em>whole day</em></strong> making my blog look better!I tried to change the logo-fonts, the location of the logo, the background picture,and so on…..but….Finally…I have done noting but leant a lot about how to change my website by using hexo…..</p>
+<h2 id="But_my_blog_still_look_so_ugly!!!!">But my blog still look so ugly!!!!</h2>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/21/hexonew/" data-id="2az3oelo32dythya" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/21/hexonew/" data-id="h3zk7i8frc09u9x7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,12 +261,12 @@ DELIMITER ;
 <blockquote>
 <p><a href="https://github.com/denil1111/Typing" target="_blank">https://github.com/denil1111/Typing</a></p>
 </blockquote>
-<h1 id="typing">Typing</h1>
+<h1 id="Typing">Typing</h1>
 <p>my computer design homework</p>
 <p>===</p>
-<h2 id="-">基本使用</h2>
+<h2 id="基本使用">基本使用</h2>
 <p>输入一个拼音，按回车，出现一行拼音，如果没有出现需要的字，就按回车出现第二行，依此类推，出现之后，输入数字即可输入，输入的文本会在text.txt中。</p>
-<h2 id="-">特殊命令</h2>
+<h2 id="特殊命令">特殊命令</h2>
 <ul>
 <li>Q:退出</li>
 <li>B:退格</li>
@@ -273,9 +277,11 @@ DELIMITER ;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/14/type/" data-id="nr768kf0tv5gftft" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/14/type/" data-id="h7hsy6kt09o1bxvm" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/汉字字库/">汉字字库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/输入法/">输入法</a></li></ul>
+
     </footer>
   </div>
   
@@ -289,6 +295,10 @@ DELIMITER ;
   <time datetime="2014-03-12T11:34:59.000Z" itemprop="datePublished">3月 12 2014</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/gg/">gg</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -313,7 +323,7 @@ DELIMITER ;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/12/day1/" data-id="tljbl3egmcbmni00" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/12/day1/" data-id="udmsdzldmr9aam9z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +360,7 @@ DELIMITER ;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/10/tosay/" data-id="g8s0o2a2fh42wmyc" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/10/tosay/" data-id="jh9m2xe5293ycybs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -386,7 +396,7 @@ DELIMITER ;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.zyhwtc.com/2014/03/10/hello-world/" data-id="alravuh54h2om97a" class="article-share-link">Share</a>
+      <a data-url="http://www.zyhwtc.com/2014/03/10/hello-world/" data-id="oizi8lclf9m8ds04" class="article-share-link">Share</a>
       
       
     </footer>
@@ -405,7 +415,7 @@ DELIMITER ;
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/gg/">gg</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -414,7 +424,7 @@ DELIMITER ;
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/效率/">效率</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trigger/">trigger</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ttf/">ttf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中文/">中文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/效率/">效率</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/汉字字库/">汉字字库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/输入法/">输入法</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -423,7 +433,7 @@ DELIMITER ;
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Github/" style="font-size: NaNpx;">Github</a><a href="/tags/效率/" style="font-size: NaNpx;">效率</a>
+      <a href="/tags/Github/" style="font-size: 10.00px;">Github</a><a href="/tags/font/" style="font-size: 10.00px;">font</a><a href="/tags/html/" style="font-size: 10.00px;">html</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/mysql/" style="font-size: 20.00px;">mysql</a><a href="/tags/trigger/" style="font-size: 10.00px;">trigger</a><a href="/tags/ttf/" style="font-size: 10.00px;">ttf</a><a href="/tags/web/" style="font-size: 10.00px;">web</a><a href="/tags/中文/" style="font-size: 10.00px;">中文</a><a href="/tags/效率/" style="font-size: 10.00px;">效率</a><a href="/tags/汉字字库/" style="font-size: 10.00px;">汉字字库</a><a href="/tags/输入法/" style="font-size: 10.00px;">输入法</a>
     </div>
   </div>
 
